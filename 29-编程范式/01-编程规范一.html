@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>编程规范一 | 全栈大前端</title>
+    <meta name="description" content="mokinzhao 的前端世界">
+    <link rel="icon" href="/favicon.ico">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="baidu-site-verification" content="code-Mu6nhhCufG">
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?89be3d514ec18b88f3530b7ecf868937";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+    
+    <link rel="preload" href="/assets/css/0.styles.8e89f972.css" as="style"><link rel="preload" href="/assets/js/app.dc73ff84.js" as="script"><link rel="preload" href="/assets/js/2.defad61e.js" as="script"><link rel="preload" href="/assets/js/219.7222acb7.js" as="script"><link rel="prefetch" href="/assets/js/10.bcfa2a79.js"><link rel="prefetch" href="/assets/js/100.0d1aab4c.js"><link rel="prefetch" href="/assets/js/101.e9e79567.js"><link rel="prefetch" href="/assets/js/102.05dae9c3.js"><link rel="prefetch" href="/assets/js/103.5ae55554.js"><link rel="prefetch" href="/assets/js/104.84e97689.js"><link rel="prefetch" href="/assets/js/105.4e235477.js"><link rel="prefetch" href="/assets/js/106.ce443642.js"><link rel="prefetch" href="/assets/js/107.808ba7ef.js"><link rel="prefetch" href="/assets/js/108.0787830d.js"><link rel="prefetch" href="/assets/js/109.4b6dcda5.js"><link rel="prefetch" href="/assets/js/11.a11fb956.js"><link rel="prefetch" href="/assets/js/110.ac0781a5.js"><link rel="prefetch" href="/assets/js/111.c7edc674.js"><link rel="prefetch" href="/assets/js/112.f2c7b219.js"><link rel="prefetch" href="/assets/js/113.be6a6651.js"><link rel="prefetch" href="/assets/js/114.94639f53.js"><link rel="prefetch" href="/assets/js/115.26695a75.js"><link rel="prefetch" href="/assets/js/116.6fb433e4.js"><link rel="prefetch" href="/assets/js/117.948d8186.js"><link rel="prefetch" href="/assets/js/118.2897a882.js"><link rel="prefetch" href="/assets/js/119.e08ae655.js"><link rel="prefetch" href="/assets/js/12.4e8d95af.js"><link rel="prefetch" href="/assets/js/120.d9fdf6dc.js"><link rel="prefetch" href="/assets/js/121.70a6e13d.js"><link rel="prefetch" href="/assets/js/122.3d162d7f.js"><link rel="prefetch" href="/assets/js/123.bcf5e3a9.js"><link rel="prefetch" href="/assets/js/124.f0bad890.js"><link rel="prefetch" href="/assets/js/125.04b38feb.js"><link rel="prefetch" href="/assets/js/126.7490911b.js"><link rel="prefetch" href="/assets/js/127.176bbfcf.js"><link rel="prefetch" href="/assets/js/128.2f036208.js"><link rel="prefetch" href="/assets/js/129.befaf026.js"><link rel="prefetch" href="/assets/js/13.6facffbb.js"><link rel="prefetch" href="/assets/js/130.be324e9c.js"><link rel="prefetch" href="/assets/js/131.b36c8762.js"><link rel="prefetch" href="/assets/js/132.abf15303.js"><link rel="prefetch" href="/assets/js/133.82a0855e.js"><link rel="prefetch" href="/assets/js/134.77b91ccc.js"><link rel="prefetch" href="/assets/js/135.b2b63ba6.js"><link rel="prefetch" href="/assets/js/136.a909b5b2.js"><link rel="prefetch" href="/assets/js/137.f511669f.js"><link rel="prefetch" href="/assets/js/138.8c0d31e2.js"><link rel="prefetch" href="/assets/js/139.7f32ba44.js"><link rel="prefetch" href="/assets/js/14.b33afe5d.js"><link rel="prefetch" href="/assets/js/140.20f0403d.js"><link rel="prefetch" href="/assets/js/141.cf8a7cc8.js"><link rel="prefetch" href="/assets/js/142.1d934ae8.js"><link rel="prefetch" href="/assets/js/143.d49b06ef.js"><link rel="prefetch" href="/assets/js/144.36cb6aee.js"><link rel="prefetch" href="/assets/js/145.292485b4.js"><link rel="prefetch" href="/assets/js/146.41a8e8bc.js"><link rel="prefetch" href="/assets/js/147.40d6396f.js"><link rel="prefetch" href="/assets/js/148.0f60763f.js"><link rel="prefetch" href="/assets/js/149.62cc6da7.js"><link rel="prefetch" href="/assets/js/15.cafa5a55.js"><link rel="prefetch" href="/assets/js/150.2b9924a8.js"><link rel="prefetch" href="/assets/js/151.5a541805.js"><link rel="prefetch" href="/assets/js/152.c683424c.js"><link rel="prefetch" href="/assets/js/153.cb603dbb.js"><link rel="prefetch" href="/assets/js/154.78e94d40.js"><link rel="prefetch" href="/assets/js/155.79bfc188.js"><link rel="prefetch" href="/assets/js/156.738a96d2.js"><link rel="prefetch" href="/assets/js/157.1be7d5c7.js"><link rel="prefetch" href="/assets/js/158.56e15a5f.js"><link rel="prefetch" href="/assets/js/159.ee80a4b0.js"><link rel="prefetch" href="/assets/js/16.25504e23.js"><link rel="prefetch" href="/assets/js/160.d94c7622.js"><link rel="prefetch" href="/assets/js/161.6a2ea455.js"><link rel="prefetch" href="/assets/js/162.eb4476a3.js"><link rel="prefetch" href="/assets/js/163.016a46e0.js"><link rel="prefetch" href="/assets/js/164.fcb5bcbb.js"><link rel="prefetch" href="/assets/js/165.5f5a6816.js"><link rel="prefetch" href="/assets/js/166.e06496b6.js"><link rel="prefetch" href="/assets/js/167.c4ebb330.js"><link rel="prefetch" href="/assets/js/168.dbe945d7.js"><link rel="prefetch" href="/assets/js/169.6bbcd728.js"><link rel="prefetch" href="/assets/js/17.3cd77e8b.js"><link rel="prefetch" href="/assets/js/170.0b4d8d2b.js"><link rel="prefetch" href="/assets/js/171.c1279fad.js"><link rel="prefetch" href="/assets/js/172.831f259b.js"><link rel="prefetch" href="/assets/js/173.bb2792b0.js"><link rel="prefetch" href="/assets/js/174.85cd3343.js"><link rel="prefetch" href="/assets/js/175.276db107.js"><link rel="prefetch" href="/assets/js/176.1a0bc249.js"><link rel="prefetch" href="/assets/js/177.6de744e1.js"><link rel="prefetch" href="/assets/js/178.7670c9ec.js"><link rel="prefetch" href="/assets/js/179.88f62001.js"><link rel="prefetch" href="/assets/js/18.146da69f.js"><link rel="prefetch" href="/assets/js/180.51183929.js"><link rel="prefetch" href="/assets/js/181.13593323.js"><link rel="prefetch" href="/assets/js/182.af33c518.js"><link rel="prefetch" href="/assets/js/183.c9f489a8.js"><link rel="prefetch" href="/assets/js/184.83daf4d3.js"><link rel="prefetch" href="/assets/js/185.d574bfbe.js"><link rel="prefetch" href="/assets/js/186.c66a675e.js"><link rel="prefetch" href="/assets/js/187.44985764.js"><link rel="prefetch" href="/assets/js/188.24e22f51.js"><link rel="prefetch" href="/assets/js/189.4112d49b.js"><link rel="prefetch" href="/assets/js/19.25463d53.js"><link rel="prefetch" href="/assets/js/190.ec53f384.js"><link rel="prefetch" href="/assets/js/191.aa19909d.js"><link rel="prefetch" href="/assets/js/192.70d7af89.js"><link rel="prefetch" href="/assets/js/193.07771ba9.js"><link rel="prefetch" href="/assets/js/194.6599c095.js"><link rel="prefetch" href="/assets/js/195.4510566a.js"><link rel="prefetch" href="/assets/js/196.709d4621.js"><link rel="prefetch" href="/assets/js/197.587200ee.js"><link rel="prefetch" href="/assets/js/198.93f1b5e1.js"><link rel="prefetch" href="/assets/js/199.4a7e2721.js"><link rel="prefetch" href="/assets/js/20.6ee1b84b.js"><link rel="prefetch" href="/assets/js/200.c8ecc840.js"><link rel="prefetch" href="/assets/js/201.15d84325.js"><link rel="prefetch" href="/assets/js/202.18da752a.js"><link rel="prefetch" href="/assets/js/203.315296d3.js"><link rel="prefetch" href="/assets/js/204.3a26525f.js"><link rel="prefetch" href="/assets/js/205.16614c07.js"><link rel="prefetch" href="/assets/js/206.296b2acc.js"><link rel="prefetch" href="/assets/js/207.d1290add.js"><link rel="prefetch" href="/assets/js/208.a8a1bb5b.js"><link rel="prefetch" href="/assets/js/209.229f1650.js"><link rel="prefetch" href="/assets/js/21.9634a2c2.js"><link rel="prefetch" href="/assets/js/210.3de1c23b.js"><link rel="prefetch" href="/assets/js/211.02eae0f8.js"><link rel="prefetch" href="/assets/js/212.d446989a.js"><link rel="prefetch" href="/assets/js/213.ded56181.js"><link rel="prefetch" href="/assets/js/214.8d6a5380.js"><link rel="prefetch" href="/assets/js/215.52dc89a7.js"><link rel="prefetch" href="/assets/js/216.4396ffd3.js"><link rel="prefetch" href="/assets/js/217.25f75c7c.js"><link rel="prefetch" href="/assets/js/218.c1f87aaa.js"><link rel="prefetch" href="/assets/js/22.487ebe73.js"><link rel="prefetch" href="/assets/js/220.26804dc0.js"><link rel="prefetch" href="/assets/js/221.abb727e0.js"><link rel="prefetch" href="/assets/js/222.6dce56f5.js"><link rel="prefetch" href="/assets/js/223.768b065a.js"><link rel="prefetch" href="/assets/js/224.30cbc608.js"><link rel="prefetch" href="/assets/js/225.6d8b4b1e.js"><link rel="prefetch" href="/assets/js/226.91de650e.js"><link rel="prefetch" href="/assets/js/227.e5b4606a.js"><link rel="prefetch" href="/assets/js/23.86931f52.js"><link rel="prefetch" href="/assets/js/24.a257291f.js"><link rel="prefetch" href="/assets/js/25.d7f9b302.js"><link rel="prefetch" href="/assets/js/26.fe28392a.js"><link rel="prefetch" href="/assets/js/27.25f7d884.js"><link rel="prefetch" href="/assets/js/28.79f19cae.js"><link rel="prefetch" href="/assets/js/29.e4efb664.js"><link rel="prefetch" href="/assets/js/3.1a9d30e8.js"><link rel="prefetch" href="/assets/js/30.d4286188.js"><link rel="prefetch" href="/assets/js/31.07cc3e4f.js"><link rel="prefetch" href="/assets/js/32.ed9540c4.js"><link rel="prefetch" href="/assets/js/33.b846fc03.js"><link rel="prefetch" href="/assets/js/34.da59123a.js"><link rel="prefetch" href="/assets/js/35.d9369049.js"><link rel="prefetch" href="/assets/js/36.34a3157a.js"><link rel="prefetch" href="/assets/js/37.a9d833a4.js"><link rel="prefetch" href="/assets/js/38.044cac31.js"><link rel="prefetch" href="/assets/js/39.89e19126.js"><link rel="prefetch" href="/assets/js/4.1b1f9f20.js"><link rel="prefetch" href="/assets/js/40.d21b0a7f.js"><link rel="prefetch" href="/assets/js/41.2830881f.js"><link rel="prefetch" href="/assets/js/42.64663e4b.js"><link rel="prefetch" href="/assets/js/43.dc19945b.js"><link rel="prefetch" href="/assets/js/44.ec8ca0de.js"><link rel="prefetch" href="/assets/js/45.e366850f.js"><link rel="prefetch" href="/assets/js/46.8266db1d.js"><link rel="prefetch" href="/assets/js/47.ce953714.js"><link rel="prefetch" href="/assets/js/48.097fce2a.js"><link rel="prefetch" href="/assets/js/49.75a75bc1.js"><link rel="prefetch" href="/assets/js/5.71c764f2.js"><link rel="prefetch" href="/assets/js/50.b0ce6dfa.js"><link rel="prefetch" href="/assets/js/51.92c378d0.js"><link rel="prefetch" href="/assets/js/52.ecb0966c.js"><link rel="prefetch" href="/assets/js/53.7029d7ce.js"><link rel="prefetch" href="/assets/js/54.5466f374.js"><link rel="prefetch" href="/assets/js/55.8ea096c1.js"><link rel="prefetch" href="/assets/js/56.4adfd0bb.js"><link rel="prefetch" href="/assets/js/57.99c122fc.js"><link rel="prefetch" href="/assets/js/58.b0535ecd.js"><link rel="prefetch" href="/assets/js/59.d681bb9f.js"><link rel="prefetch" href="/assets/js/6.5ba33b3f.js"><link rel="prefetch" href="/assets/js/60.b6fa02be.js"><link rel="prefetch" href="/assets/js/61.1aba6484.js"><link rel="prefetch" href="/assets/js/62.0ce118a8.js"><link rel="prefetch" href="/assets/js/63.2e959c01.js"><link rel="prefetch" href="/assets/js/64.67ceb571.js"><link rel="prefetch" href="/assets/js/65.4fc5d9b2.js"><link rel="prefetch" href="/assets/js/66.d22a52af.js"><link rel="prefetch" href="/assets/js/67.e79400a0.js"><link rel="prefetch" href="/assets/js/68.920f364f.js"><link rel="prefetch" href="/assets/js/69.e04769e0.js"><link rel="prefetch" href="/assets/js/7.9d2d5aae.js"><link rel="prefetch" href="/assets/js/70.4db4d442.js"><link rel="prefetch" href="/assets/js/71.ef31fc48.js"><link rel="prefetch" href="/assets/js/72.8bcf8a4f.js"><link rel="prefetch" href="/assets/js/73.78284d36.js"><link rel="prefetch" href="/assets/js/74.e2f2c775.js"><link rel="prefetch" href="/assets/js/75.260bbc06.js"><link rel="prefetch" href="/assets/js/76.3dff37ec.js"><link rel="prefetch" href="/assets/js/77.22a03d0c.js"><link rel="prefetch" href="/assets/js/78.2d92320b.js"><link rel="prefetch" href="/assets/js/79.84737db1.js"><link rel="prefetch" href="/assets/js/8.26008d3b.js"><link rel="prefetch" href="/assets/js/80.8a1a6d6a.js"><link rel="prefetch" href="/assets/js/81.d17de0ed.js"><link rel="prefetch" href="/assets/js/82.a87708f5.js"><link rel="prefetch" href="/assets/js/83.f426229e.js"><link rel="prefetch" href="/assets/js/84.d5fa14f7.js"><link rel="prefetch" href="/assets/js/85.f2e1fec8.js"><link rel="prefetch" href="/assets/js/86.6e19be96.js"><link rel="prefetch" href="/assets/js/87.8f24ffb7.js"><link rel="prefetch" href="/assets/js/88.50512097.js"><link rel="prefetch" href="/assets/js/89.e03bf877.js"><link rel="prefetch" href="/assets/js/9.b2b4a298.js"><link rel="prefetch" href="/assets/js/90.6b04f541.js"><link rel="prefetch" href="/assets/js/91.90ced203.js"><link rel="prefetch" href="/assets/js/92.2ad0f962.js"><link rel="prefetch" href="/assets/js/93.d4df3ade.js"><link rel="prefetch" href="/assets/js/94.40ab982e.js"><link rel="prefetch" href="/assets/js/95.18534042.js"><link rel="prefetch" href="/assets/js/96.84b23ea8.js"><link rel="prefetch" href="/assets/js/97.5d766e55.js"><link rel="prefetch" href="/assets/js/98.b989fcfd.js"><link rel="prefetch" href="/assets/js/99.de7c2933.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.8e89f972.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">全栈大前端</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">架构分析与设计</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://mp.weixin.qq.com/s/m519w-RtdslHHrcbi_VLBA" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  框架设计：PC 端单页多页框架如何设计与落地 
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://mp.weixin.qq.com/s/Vtczty5i8awo3p7qspjhmg" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  框架设计：RN 端的框架如何设计与落地
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://mp.weixin.qq.com/s/x4KcDPrV2aqtjkRdow_JVg" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  透彻分析：常见的前端架构风格和案例
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://mp.weixin.qq.com/s/1kl8SV28GDt_40FF_6CuhA" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  领域驱动设计在前端中的应用
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://juejin.cn/post/6844903853859536903" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  大型项目前端架构浅谈
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">数据结构与算法</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://mp.weixin.qq.com/s/EFil0A_ylv_PCreVj-SebA" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  一文概览数据结构与算法
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/wangzheng0822/algo" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  数据结构与算法必会的50个代码实现
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://www.conardli.top/docs/dataStructure/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  算法专栏
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  力扣加加
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://labuladong.github.io/algo/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  labuladong的算法小抄
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">编程范式与设计模式</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.zoo.team/article/program-paradigm" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  编写高质量可维护的代码：编程范式
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://segmentfault.com/a/1190000018239556" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  面向对象之三个基本特征（javaScript）
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://segmentfault.com/a/1190000020319171" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  面向对象之七大基本原则（javaScript）
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://juejin.im/post/5c2e10a76fb9a049c0432697" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  设计模式与开发实践
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/ascoders/weekly/tree/master/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  前端精读-设计模式
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">跨端融合</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://juejin.cn/post/6881597846307635214" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  深入浅出主流的几款小程序跨端框架原理
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://juejin.cn/post/6893028483232956429" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  去哪儿网React Native 优先的多端统一化方案
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.electronjs.org/docs" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Electron
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://nervjs.github.io/taro/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Taro
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://uniapp.dcloud.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Uni-app
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://flutter.dev/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Flutter
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://developer.mozilla.org/zh-CN/docs/Web/Progressive_web_apps" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  PWA
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">低码平台</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="http://h5.dooring.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  H5-dooring
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><a href="https://blog.csdn.net/z4909801" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">架构分析与设计</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://mp.weixin.qq.com/s/m519w-RtdslHHrcbi_VLBA" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  框架设计：PC 端单页多页框架如何设计与落地 
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://mp.weixin.qq.com/s/Vtczty5i8awo3p7qspjhmg" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  框架设计：RN 端的框架如何设计与落地
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://mp.weixin.qq.com/s/x4KcDPrV2aqtjkRdow_JVg" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  透彻分析：常见的前端架构风格和案例
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://mp.weixin.qq.com/s/1kl8SV28GDt_40FF_6CuhA" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  领域驱动设计在前端中的应用
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://juejin.cn/post/6844903853859536903" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  大型项目前端架构浅谈
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">数据结构与算法</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://mp.weixin.qq.com/s/EFil0A_ylv_PCreVj-SebA" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  一文概览数据结构与算法
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/wangzheng0822/algo" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  数据结构与算法必会的50个代码实现
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://www.conardli.top/docs/dataStructure/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  算法专栏
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  力扣加加
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://labuladong.github.io/algo/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  labuladong的算法小抄
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">编程范式与设计模式</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.zoo.team/article/program-paradigm" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  编写高质量可维护的代码：编程范式
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://segmentfault.com/a/1190000018239556" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  面向对象之三个基本特征（javaScript）
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://segmentfault.com/a/1190000020319171" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  面向对象之七大基本原则（javaScript）
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://juejin.im/post/5c2e10a76fb9a049c0432697" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  设计模式与开发实践
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/ascoders/weekly/tree/master/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  前端精读-设计模式
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">跨端融合</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://juejin.cn/post/6881597846307635214" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  深入浅出主流的几款小程序跨端框架原理
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://juejin.cn/post/6893028483232956429" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  去哪儿网React Native 优先的多端统一化方案
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.electronjs.org/docs" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Electron
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://nervjs.github.io/taro/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Taro
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://uniapp.dcloud.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Uni-app
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://flutter.dev/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Flutter
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://developer.mozilla.org/zh-CN/docs/Web/Progressive_web_apps" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  PWA
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">低码平台</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="http://h5.dooring.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  H5-dooring
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><a href="https://blog.csdn.net/z4909801" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/" class="sidebar-link">Home</a></li><li><a href="/00-大纲.html" class="sidebar-link">项目大纲</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Java Script</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ECMA Script</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Type Script</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Html CSS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Browser</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Vue</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>React</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Store</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Node</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Webpack</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Babel</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>SSR</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Electron</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Hybrid</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>跨端</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Dev Ops</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>小程序</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>工程化</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>微前端</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>性能优化</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>监控体系</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>网络</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>安全</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>算法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>手写</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>编程范式</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/29-编程范式/00-常见编程范式.html" class="sidebar-link">常见编程范式</a></li><li><a href="/29-编程范式/01-编程规范一.html" class="active sidebar-link">编程规范一</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/29-编程范式/01-编程规范一.html#一、安装自动化注释插件-korofileheader" class="sidebar-link">一、安装自动化注释插件(korofileheader</a></li><li class="sidebar-sub-header"><a href="/29-编程范式/01-编程规范一.html#二、添加-eslintrc-js-文件-vue-cli3-0-不用添加此步骤" class="sidebar-link">二、添加.eslintrc.js 文件(Vue cli3.0+不用添加此步骤)</a></li><li class="sidebar-sub-header"><a href="/29-编程范式/01-编程规范一.html#三、添加-prettierrc-json-文件-vue-cli3-0-不用添加此步骤" class="sidebar-link">三、添加.prettierrc.json 文件(Vue cli3.0+不用添加此步骤)</a></li><li class="sidebar-sub-header"><a href="/29-编程范式/01-编程规范一.html#四、配置自动保存格式化" class="sidebar-link">四、配置自动保存格式化</a></li><li class="sidebar-sub-header"><a href="/29-编程范式/01-编程规范一.html#一、git-flow-convention" class="sidebar-link">一、Git Flow Convention</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/29-编程范式/01-编程规范一.html#feature" class="sidebar-link">Feature</a></li><li class="sidebar-sub-header"><a href="/29-编程范式/01-编程规范一.html#hotfix" class="sidebar-link">Hotfix</a></li><li class="sidebar-sub-header"><a href="/29-编程范式/01-编程规范一.html#develop" class="sidebar-link">Develop</a></li></ul></li><li class="sidebar-sub-header"><a href="/29-编程范式/01-编程规范一.html#二、code-commit-process" class="sidebar-link">二、Code Commit Process</a></li><li class="sidebar-sub-header"><a href="/29-编程范式/01-编程规范一.html#三、合并规范及冲突处理原则" class="sidebar-link">三、合并规范及冲突处理原则</a></li><li class="sidebar-sub-header"><a href="/29-编程范式/01-编程规范一.html#一、命名" class="sidebar-link">一、命名</a></li><li class="sidebar-sub-header"><a href="/29-编程范式/01-编程规范一.html#三、js-推荐写法" class="sidebar-link">三、JS 推荐写法</a></li><li class="sidebar-sub-header"><a href="/29-编程范式/01-编程规范一.html#四、scss-推荐写法" class="sidebar-link">四、SCSS 推荐写法</a></li></ul></li><li><a href="/29-编程范式/02-编程规范二.html" class="sidebar-link">编程规范二</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>面试</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Other</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_1-风格配置-prettierrc-eslint-korofileheader"><a href="#_1-风格配置-prettierrc-eslint-korofileheader" aria-hidden="true" class="header-anchor">#</a> 1.风格配置(Prettierrc+Eslint+Korofileheader)</h1> <h2 id="一、安装自动化注释插件-korofileheader"><a href="#一、安装自动化注释插件-korofileheader" aria-hidden="true" class="header-anchor">#</a> 一、安装自动化注释插件(<a href="https://marketplace.visualstudio.com/items?itemName=OBKoro1.korofileheader&amp;fileGuid=HtKDCxcXdhJCcqy3" target="_blank" rel="noopener noreferrer">korofileheader<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>)</h2> <p><a href="https://marketplace.visualstudio.com/items?itemName=OBKoro1.korofileheader&amp;fileGuid=HtKDCxcXdhJCcqy3" target="_blank" rel="noopener noreferrer">https://marketplace.visualstudio.com/items?itemName=OBKoro1.korofileheader<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h2 id="二、添加-eslintrc-js-文件-vue-cli3-0-不用添加此步骤"><a href="#二、添加-eslintrc-js-文件-vue-cli3-0-不用添加此步骤" aria-hidden="true" class="header-anchor">#</a> 二、添加.eslintrc.js 文件(Vue cli3.0+不用添加此步骤)</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>module.exports = {
+    root: true,
+    parser: 'babel-eslint',
+    parserOptions: {
+        sourceType: 'module',
+    },
+    env: {
+        browser: true,
+    },
+    extends: [
+        'standard', //使用 standard 做代码规范
+        // 'prettier',
+        'plugin:prettier/recommended',
+    ],
+    plugins: ['html', 'vuefix'],
+    // &quot;off&quot; -&gt; 0 关闭规则
+    // &quot;warn&quot; -&gt; 1 开启警告规则
+    //&quot;error&quot; -&gt; 2 开启错误规则
+    // 了解了上面这些，下面这些代码相信也看的明白了
+    rules: {
+        'prettier/prettier': 'off',
+        // allow async-await
+        'generator-star-spacing': 'off',
+        // allow debugger during development
+        'no-debugger': 'off',
+        // js 语句结尾必须使用分号
+        semi: ['off', 'always'],
+        // 三等号
+        eqeqeq: 0,
+        // 强制在注释中 // 或 /* 使用一致的空格
+        'spaced-comment': 0,
+        // 关键字后面使用一致的空格
+        'keyword-spacing': 1,
+        // 强制在 function 的左括号之前使用一致的空格
+        'space-before-function-paren': 0,
+        // 引号类型
+        quotes: [0, 'single'],
+        // 禁止出现未使用过的变量
+        'no-unused-vars': 1,
+        // 要求或禁止末尾逗号
+        'comma-dangle': 0,
+        /* 常规性写法注意*/
+        camelcase: 1, //没有驼峰命名警告
+        'no-dupe-keys': 1,
+        'no-unreachable': 1,
+        'no-undef': 1,
+        'no-throw-literal': 1,
+        'no-unsafe-finally': 1,
+        'no-extend-native': 1,
+        'one-var': 1,
+        'no-useless-escape': 1,
+    },
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br></div></div><h2 id="三、添加-prettierrc-json-文件-vue-cli3-0-不用添加此步骤"><a href="#三、添加-prettierrc-json-文件-vue-cli3-0-不用添加此步骤" aria-hidden="true" class="header-anchor">#</a> 三、添加.prettierrc.json 文件(Vue cli3.0+不用添加此步骤)</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>{
+    &quot;trailingComma&quot;: &quot;all&quot;,
+    &quot;tabWidth&quot;: 4,
+    &quot;semi&quot;: false,
+    &quot;singleQuote&quot;: true,
+    &quot;arrowParens&quot;: &quot;avoid&quot;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h2 id="四、配置自动保存格式化"><a href="#四、配置自动保存格式化" aria-hidden="true" class="header-anchor">#</a> 四、配置自动保存格式化</h2> <p>VsCode:</p> <p>Settings--&gt;Edit in Settings.json</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>{
+  //配置 ESLint 检查的文件类型
+  &quot;eslint.validate&quot;: [
+    &quot;javascript&quot;,
+    &quot;javascriptreact&quot;,
+    {
+      &quot;language&quot;: &quot;html&quot;,
+      &quot;autoFix&quot;: true
+    },
+    {
+      &quot;language&quot;: &quot;vue&quot;,
+      &quot;autoFix&quot;: true
+    }
+  ],
+  &quot;fileheader.customMade&quot;: {
+    &quot;Author&quot;: &quot;mokinzhao&quot;, //更改成自己的名字
+    &quot;Date&quot;: &quot;Do not edit&quot;, // 文件创建时间(不变)
+    &quot;Description&quot;: &quot;&quot;, //内容描述
+    &quot;LastEditTime&quot;: &quot;Do not edit&quot; // 文件最后编辑时间
+  },
+  &quot;fileheader.configObj&quot;: {
+    &quot;prohibitAutoAdd&quot;: [
+      &quot;json&quot;,
+      &quot;md&quot;
+    ] // 禁止.json .md 文件，自动添加头部注释
+  },
+  // 禁用 vetur.format
+  &quot;vetur.format.defaultFormatter.html&quot;: &quot;none&quot;,
+  &quot;vetur.format.defaultFormatter.css&quot;: &quot;none&quot;,
+  &quot;vetur.format.defaultFormatter.js&quot;: &quot;none&quot;,
+  // //让 prettier 使用 eslint 的代码格式进行校验
+  &quot;prettier.eslintIntegration&quot;: true,
+  //保存时 eslint 自动修复错误
+  &quot;eslint.autoFixOnSave&quot;: true,
+  //保存自动格式化
+  &quot;editor.formatOnSave&quot;: true,
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br></div></div><h1 id="_2-git-分支管理及发布规范"><a href="#_2-git-分支管理及发布规范" aria-hidden="true" class="header-anchor">#</a> <strong>2.Git 分支管理及发布规范</strong></h1> <h2 id="一、git-flow-convention"><a href="#一、git-flow-convention" aria-hidden="true" class="header-anchor">#</a> 一、Git Flow Convention</h2> <p>When you develop a new feature, you are supposed to start a new feature branch feature/*, When you develop a new hotfix, you are supposed to start a new hotfix branch hotfix/*</p> <h3 id="feature"><a href="#feature" aria-hidden="true" class="header-anchor">#</a> Feature</h3> <p>Anytime when you would like to start a new feature (new independent feature), you are supposed to start a new branch named as feature/[your develop id]-[feature desc]-[create Date],such as, feature/ylzhaol-dataflow</p> <h3 id="hotfix"><a href="#hotfix" aria-hidden="true" class="header-anchor">#</a> Hotfix</h3> <p>Anytime when you would like to start a new hotfix, you are supposed to start a new branch named as hotfix/[your develop id]-[feature desc]-[create Date], such as, hotfix/ylzhao-authentication-bug</p> <h3 id="develop"><a href="#develop" aria-hidden="true" class="header-anchor">#</a> Develop</h3> <p>Suggest to keep develop branch a place for community developers and also team members to merge features.</p> <h2 id="二、code-commit-process"><a href="#二、code-commit-process" aria-hidden="true" class="header-anchor">#</a> 二、Code Commit Process</h2> <ol><li><p>Local test your code until you are sure it work as desired</p></li> <li><p>Review the code diff before commit to your branch to remove any diff that might distract code reviewer from understanding your code. (Reminder: Only fix <strong>one thing</strong> in one PR)</p></li> <li><p>Create PR in GitLab for<a href="https://gitlab.zmaxis.com/?fileGuid=HtKDCxcXdhJCcqy3" target="_blank" rel="noopener noreferrer">https://gitlab.zmaxis.com/<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></li> <li><p>Kindly add any additional reviewers who might need to know about this change besides the default reviewers</p></li> <li><p>If the code diff is non-trivial, schedule a meeting with code reviewers to walk through it.</p></li> <li><p>Revise the PR base on code review feedback &amp; comments</p></li> <li><p>Only merge one someone else has &quot;approved&quot; your PR</p></li></ol> <p>8.Commit message advice add type</p> <ul><li>feat：新功能（feature）</li> <li>add : 增加文件</li> <li>update : 更新文件</li> <li>fix：修补 bug</li> <li>remove：删除文件</li> <li>docs：文档（documentation）</li> <li>style： 格式（不影响代码运行的变动）</li> <li>refactor：重构（即不是新增功能，也不是修改 bug 的代码变动）</li> <li>test：增加测试</li> <li>chore：构建过程或辅助工具的变动</li></ul> <h2 id="三、合并规范及冲突处理原则"><a href="#三、合并规范及冲突处理原则" aria-hidden="true" class="header-anchor">#</a> 三、合并规范及冲突处理原则</h2> <ol><li>开发成员 开发新功能 需要基于 master 建立独立的分支，格式:feature/[your develop id]- [feature desc]-[create Date] 例如: feature/ylzhao-addImgList-2019.10.12。</li> <li>当你分支代码要合并到对应的测试或线上环境时，请在<a href="https://gitlab.neoclub.cn/?fileGuid=HtKDCxcXdhJCcqy3" target="_blank" rel="noopener noreferrer">https://gitlab.neoclub.cn/<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>上提交 merge request 操作，your branch into dev/master，填写对应的 review 人员(重要),最终由 review 人员进行最后的合并发布操作。</li> <li>null
+当遇到合并冲突时候：</li></ol> <ul><li>解决方式一（基于当前分支解决）：在本地自己分支下拉取目标分支代码进行合并 ，只保留冲突文件，重置其他非冲突文件，处理完冲突文件后仅推送该冲突文件到自己分支（重要）,这时候方可再进行 merge request 流程。</li> <li>解决方式二（基于目标分支解决）：在本地基于目标分支上拉去自己分支进行合并。解决冲突文件，由 review 人员在旁观看（重要）,在 review 人员确认无误的情况下进行 push 代码到目标分支上。</li></ul> <p>null</p> <h1 id="_3-编码规范（-代码评审-checklist-清单）"><a href="#_3-编码规范（-代码评审-checklist-清单）" aria-hidden="true" class="header-anchor">#</a> **3.编码规范（**代码评审 Checklist 清单）</h1> <h2 id="一、命名"><a href="#一、命名" aria-hidden="true" class="header-anchor">#</a> 一、命名</h2> <p>2.1、JS 采用 Camel Case 小驼峰式命名</p> <p>推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>   studentInfot
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>2.2、避免名称冗余
+推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const Car = {
+  make: &quot;Honda&quot;,
+  model: &quot;Accord&quot;,
+  color: &quot;Blue&quot;
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>不推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const Car = {
+  carMake: &quot;Honda&quot;,
+  carModel: &quot;Accord&quot;,
+  carColor: &quot;Blue&quot;
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>2.3、CSS 类名采用 BEM 命名规范
+推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>.block__element{}
+.block--modifier{}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>2.4、命名符合语义化
+命名需要符合语义化，如果函数命名，可以采用加上动词前缀：</p> <table><thead><tr><th style="text-align:left;">动词</th> <th style="text-align:left;">含义</th></tr></thead> <tbody><tr><td style="text-align:left;">can</td> <td style="text-align:left;">判断是否可执行某个动作</td></tr> <tr><td style="text-align:left;">has</td> <td style="text-align:left;">判断是否含有某个值</td></tr> <tr><td style="text-align:left;">is</td> <td style="text-align:left;">判断是否为某个值</td></tr> <tr><td style="text-align:left;">get</td> <td style="text-align:left;">获取某个值</td></tr> <tr><td style="text-align:left;">set</td> <td style="text-align:left;">设置某个值</td></tr></tbody></table> <p>推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>//是否可阅读
+function canRead(){
+   return true;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>//获取姓名</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>function getName{
+   return this.name
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="三、js-推荐写法"><a href="#三、js-推荐写法" aria-hidden="true" class="header-anchor">#</a> 三、JS 推荐写法</h2> <p>3.1、每个常量都需命名</p> <p>每个常量应该命名，不然看代码的人不知道这个常量表示什么意思。</p> <p>推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const COL_NUM = 10;
+let row = Math.ceil(num/COL_NUM);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>不推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>let row = Math.ceil(num/10);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>3.2、推荐使用字面量
+创建对象和数组推荐使用字面量，因为这不仅是性能最优也有助于节省代码量。</p> <p>推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>let obj = {
+     name:'tom',
+     age:15,
+     sex:'男'
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>不推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>let obj = {};
+obj.name = 'tom';
+obj.age = 15;
+obj.sex = '男';
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>3.3、对象设置默认属性的推荐写法
+推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const menuConfig = {
+  title: &quot;Order&quot;,
+  // User did not include 'body' key
+  buttonText: &quot;Send&quot;,
+  cancellable: true
+};
+function createMenu(config) {
+  config = Object.assign(
+    {
+      title: &quot;Foo&quot;,
+      body: &quot;Bar&quot;,
+      buttonText: &quot;Baz&quot;,
+      cancellable: true
+    },
+    config
+  );
+  // config now equals: {title: &quot;Order&quot;, body: &quot;Bar&quot;, buttonText: &quot;Send&quot;, cancellable: true}
+  // ...
+}
+createMenu(menuConfig);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><p>不推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const menuConfig = {
+  title: null,
+  body: &quot;Bar&quot;,
+  buttonText: null,
+  cancellable: true
+};
+function createMenu(config) {
+  config.title = config.title || &quot;Foo&quot;;
+  config.body = config.body || &quot;Bar&quot;;
+  config.buttonText = config.buttonText || &quot;Baz&quot;;
+  config.cancellable =
+    config.cancellable !== undefined ? config.cancellable : true;
+}
+createMenu(menuConfig);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>3.4、将对象的属性值保存为局部变量
+对象成员嵌套越深，读取速度也就越慢。所以好的经验法则是：如果在函数中需要多次读取一个对象属性，最佳做法是将该属性值保存在局部变量中，避免多次查找带来的性能开销。</p> <p>推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>let person = {
+    info:{
+        sex:'男'
+    }
+}
+function  getMaleSex(){
+    let sex = person.info.sex;
+    if(sex === '男'){
+        console.log(sex)
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>不推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>let person = {
+    info:{
+        sex:'男'
+    }
+}
+function  getMaleSex(){
+    if(person.info.sex === '男'){
+        console.log(person.info.sex)
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>3.5、字符串转为整型
+当需要将浮点数转换成整型时，应该使用 Math.floor()或者 Math.round()，而不是使用 parseInt()将字符串转换成数字。Math 是内部对象，所以 Math.floor()`其实并没有多少查询方法和调用时间，速度是最快的。</p> <p>推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>let num = Math.floor('1.6');
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>不推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>let num = parseInt('1.6');
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>3.6、函数参数
+函数参数越少越好，如果参数超过两个，要使用 ES6 的解构语法，不用考虑参数的顺序。</p> <p>推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>function createMenu({ title, body, buttonText, cancellable }) {
+  // ...
+}
+createMenu({
+  title: 'Foo',
+  body: 'Bar',
+  buttonText: 'Baz',
+  cancellable: true
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>不推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>function createMenu(title, body, buttonText, cancellable) {
+  // ...
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>3.7、使用参数默认值
+使用参数默认值 替代 使用条件语句进行赋值。</p> <p>推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>function createMicrobrewery(name = &quot;Hipster Brew Co.&quot;) {
+  // ...
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>不推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>function createMicrobrewery(name) {
+  const breweryName = name || &quot;Hipster Brew Co.&quot;;
+  // ...
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>3.8、最小函数准则
+这是一条在软件工程领域流传久远的规则。严格遵守这条规则会让你的代码可读性更好，也更容易重构。如果违反这个规则，那么代码会很难被测试或者重用 。</p> <p>3.9、不要写全局方法</p> <p>在 JavaScript 中，永远不要污染全局，会在生产环境中产生难以预料的 bug。举个例子，比如你在  Array.prototype  上新增一个  diff  方法来判断两个数组的不同。而你同事也打算做类似的事情，不过他的  diff  方法是用来判断两个数组首位元素的不同。很明显你们方法会产生冲突，遇到这类问题我们可以用 ES2015/ES6 的语法来对  Array  进行扩展。</p> <p>推荐:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>class SuperArray extends Array {
+  diff(comparisonArray) {
+    const hash = new Set(comparisonArray);
+    return this.filter(elem =&gt; !hash.has(elem));
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>不推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>Array.prototype.diff = function diff(comparisonArray) {
+  const hash = new Set(comparisonArray);
+  return this.filter(elem =&gt; !hash.has(elem));
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>3.10、推荐函数式编程
+函数式变编程可以让代码的逻辑更清晰更优雅，方便测试。</p> <p>推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const programmerOutput = [
+  {
+    name: 'Uncle Bobby',
+    linesOfCode: 500
+  }, {
+    name: 'Suzie Q',
+    linesOfCode: 1500
+  }, {
+    name: 'Jimmy Gosling',
+    linesOfCode: 150
+  }, {
+    name: 'Gracie Hopper',
+    linesOfCode: 1000
+  }
+];
+let totalOutput = programmerOutput
+  .map(output =&gt; output.linesOfCode)
+  .reduce((totalLines, lines) =&gt; totalLines + lines, 0)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><p>不推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code> const programmerOutput = [
+  {
+    name: 'Uncle Bobby',
+    linesOfCode: 500
+  }, {
+    name: 'Suzie Q',
+    linesOfCode: 1500
+  }, {
+    name: 'Jimmy Gosling',
+    linesOfCode: 150
+  }, {
+    name: 'Gracie Hopper',
+    linesOfCode: 1000
+  }
+];
+let totalOutput = 0;
+for (let i = 0; i &lt; programmerOutput.length; i++) {
+  totalOutput += programmerOutput[i].linesOfCode;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p>3.11、使用多态替换条件语句</p> <p>为了让代码更简洁易读，如果你的函数中出现了条件判断，那么说明你的函数不止干了一件事情，违反了函数单一原则 ；并且绝大数场景可以使用多态替代</p> <p>推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>class Airplane {
+  // ...
+}
+// 波音 777
+class Boeing777 extends Airplane {
+  // ...
+  getCruisingAltitude() {
+    return this.getMaxAltitude() - this.getPassengerCount();
+  }
+}
+// 空军一号
+class AirForceOne extends Airplane {
+  // ...
+  getCruisingAltitude() {
+    return this.getMaxAltitude();
+  }
+}
+// 赛纳斯飞机
+class Cessna extends Airplane {
+  // ...
+  getCruisingAltitude() {
+    return this.getMaxAltitude() - this.getFuelExpenditure();
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><p>不推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>class Airplane {
+  // ...
+  // 获取巡航高度
+  getCruisingAltitude() {
+    switch (this.type) {
+      case '777':
+        return this.getMaxAltitude() - this.getPassengerCount();
+      case 'Air Force One':
+        return this.getMaxAltitude();
+      case 'Cessna':
+        return this.getMaxAltitude() - this.getFuelExpenditure();
+    }
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>3.12、定时器是否清除
+代码中使用了定时器 setTimeout 和 setInterval，需要在不使用时进行清除。</p> <h2 id="四、scss-推荐写法"><a href="#四、scss-推荐写法" aria-hidden="true" class="header-anchor">#</a> 四、SCSS 推荐写法</h2> <p>4.1、变量 $ 使用</p> <p>利用 scss 中的变量配置，可以进行项目的颜色、字体大小统一更改（换肤），有利于后期项目的维护。</p> <p>推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>$--color-success: #67C23A;
+$--color-warning: #E6A23C;
+$--color-danger: #F56C6C;
+$--color-info: #909399;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>4.2、<a href="https://github.com/import?fileGuid=HtKDCxcXdhJCcqy3" target="_blank" rel="noopener noreferrer">@import<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>导入样式文件
+scss 中的<a href="https://github.com/import?fileGuid=HtKDCxcXdhJCcqy3" target="_blank" rel="noopener noreferrer">@import<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>规则在生成 css 文件时就把相关文件导入进来。这意味着所有相关的样式被归纳到了同一个 css 文件中，而无需发起额外的下载请求，在构建我们自己的组件库时推荐使用。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>@import &quot;./base.scss&quot;;
+@import &quot;./pagination.scss&quot;;
+@import &quot;./dialog.scss&quot;;
+@import &quot;./autocomplete.scss&quot;;
+@import &quot;./dropdown.scss&quot;;
+@import &quot;./dropdown-menu.scss&quot;;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>4.3、局部文件命名的使用
+scss 局部文件的文件名以下划线开头。这样，scss 就不会在编译时单独编译这个文件输出 css，而只把这个文件用作导入。</p> <p>4.4、父选择器标识符 &amp; 实现 BEM 命令规范</p> <p>scss 的嵌套和父选择器标识符&amp;能解决 BEM 命名的冗长，且使样式可读性更高。</p> <p>推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>.el-input {
+  display: block;
+  &amp;__inner {
+     text-align: center;
+  }
+ }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>4.5、<a href="https://github.com/mixin?fileGuid=HtKDCxcXdhJCcqy3" target="_blank" rel="noopener noreferrer">@mixin<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>混合器的使用
+mixin 混合器用来实现大段样式的重用，减少代码的冗余，且支持传参。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $border-radius) {
+  padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
+  border-radius: $border-radius;
+  &amp;.is-round {
+    padding: $padding-vertical $padding-horizontal;
+  }
+}
+  @include m(medium) {
+    @include button-size($--button-medium-padding-vertical, $--button-medium-padding-horizontal, $--button-medium-font-size, $--button-medium-border-radius);
+  }
+  @include m(small) {
+    @include button-size($--button-small-padding-vertical, $--button-small-padding-horizontal, $--button-small-font-size, $--button-small-border-radius);
+  }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>4.6、<a href="https://github.com/extend?fileGuid=HtKDCxcXdhJCcqy3" target="_blank" rel="noopener noreferrer">@extend<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>指令的使用</p> <p>（1）使用<a href="https://github.com/extend?fileGuid=HtKDCxcXdhJCcqy3" target="_blank" rel="noopener noreferrer">@extend<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>产生<a href="http://vanseodesign.com/css/dry-principles/?fileGuid=HtKDCxcXdhJCcqy3" target="_blank" rel="noopener noreferrer">DRY CSS<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>风格的代码（Don't repeat yourself）</p> <p>（2）<a href="https://github.com/mixin?fileGuid=HtKDCxcXdhJCcqy3" target="_blank" rel="noopener noreferrer">@mixin<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>主要的优势就是它能够接受参数。如果想传递参数，你会很自然地选择<a href="https://github.com/mixin?fileGuid=HtKDCxcXdhJCcqy3" target="_blank" rel="noopener noreferrer">@mixin<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>而不是<a href="https://github.com/extend?fileGuid=HtKDCxcXdhJCcqy3" target="_blank" rel="noopener noreferrer">@extend<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>推荐：
+.common-mod {
+  height: 250px;
+  width: 50%;
+  background-color: #fff;
+  text-align: center;
+}
+ .show-mod--right {
+   @extend .common-mod;
+   float: right;
+ }
+.show-mod--left {
+   @extend .common-mod;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>4.7、#{} 插值的使用
+插值能动态定义类名的名称，当有两个页面的样式类似时，我们会将类似的样式抽取成页面混合器，但两个不同的页面样式的命名名称根据 BEM 命名规范不能一样，这时我们可使用插值进行动态命名。</p> <p>推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>@mixin home-content($class) {
+  .#{$class} {
+    position: relative;
+    background-color: #fff;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    &amp;--left {
+      margin-left: 160px;
+    }
+    &amp;--noleft {
+      margin-left: 0;
+    }
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>4.8、each 遍历、map 数据类型、@mixin/<a href="https://github.com/include?fileGuid=HtKDCxcXdhJCcqy3" target="_blank" rel="noopener noreferrer">@include<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>混合器、#{}插值 结合使用
+可通过 each 遍历、map 数据类型、@mixin/<a href="https://github.com/include?fileGuid=HtKDCxcXdhJCcqy3" target="_blank" rel="noopener noreferrer">@include<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>混合器、#{}插值 结合使用，从而减少冗余代码，使代码更精简。</p> <p>推荐：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>$img-list: (
+   (xlsimg, $papers-excel),
+   (xlsximg, $papers-excel),
+   (gifimg, $papers-gif),
+   (jpgimg, $papers-jpg),
+   (mp3img, $papers-mp3),
+   (mp4img, $papers-mp3),
+   (docimg, $papers-word),
+   (docximg, $papers-word),
+   (rarimg, $papers-zip),
+   (zipimg, $papers-zip),
+   (unknownimg, $papers-unknown)
+);
+@each $label, $value in $img-list {
+  .com-hwicon__#{$label} {
+    @include commonImg($value);
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><p>4.9、scss 自带函数的应用
+scss 自带函数的应用，从而进行相关的计算，例如 mix 函数的使用如下。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code> @include m(text) {
+    &amp;:hover,
+    &amp;:focus {
+      color: mix($--color-white, $--color-primary, $--button-hover-tint-percent);
+      border-color: transparent;
+      background-color: transparent;
+    }
+    &amp;:active {
+      color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+      border-color: transparent;
+      background-color: transparent;
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>4.10、gulp-sass 的使用
+gulp-sass 插件能实时监测 scss 代码检查其语法错误并将其编译成 css 代码，帮助开发人员检查 scss 语法的准确性，且其是否符合我们的预期，相关配置如下：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>gulp.task('gulpsass', function() {
+  return gulp.src('src/style/components/hwIcon.scss')
+    .pipe(gulpsass().on('error', gulpsass.logError))
+    .pipe(gulp.dest('src/style/dest'));
+});
+gulp.task('watch', function() {
+  gulp.watch('src/style/components/hwIcon.scss', ['gulpsass']);
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">4/6/2021, 1:51:47 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/29-编程范式/00-常见编程范式.html" class="prev">常见编程范式</a></span> <span class="next"><a href="/29-编程范式/02-编程规范二.html">编程规范二</a>→
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.dc73ff84.js" defer></script><script src="/assets/js/2.defad61e.js" defer></script><script src="/assets/js/219.7222acb7.js" defer></script>
+  </body>
+</html>
